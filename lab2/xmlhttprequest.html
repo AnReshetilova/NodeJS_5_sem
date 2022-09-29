@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02-04</title>
+</head>
+<body>
+    
+</body>
+<script>
+        const xmlHttpRequest = new XMLHttpRequest();
+        xmlHttpRequest.open("GET", "http://localhost:5000/api/name");
+
+        xmlHttpRequest.onload = () => {
+            const body = document.querySelector("body");
+            body.innerText = xmlHttpRequest.responseText;
+        }
+        xmlHttpRequest.send();
+</script>
+</html>
